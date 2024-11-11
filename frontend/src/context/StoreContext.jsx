@@ -1,9 +1,22 @@
-import React from 'react'
+import { createContext } from "react";
 
-function StoreContext() {
-  return (
-    <div>StoreContext</div>
-  )
+
+
+export const StoreContext = createContext(null)
+
+
+const StoreContextProvider = (props)=>{
+   const contextValue ={
+
+   }
+
+   return(
+    <StoreContext.Provider>
+        {props.childern }
+    </StoreContext.Provider>
+   )
+
+
 }
 
-export default StoreContext
+export default StoreContextProvider;
